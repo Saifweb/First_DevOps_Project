@@ -1,3 +1,4 @@
+## our docker file
 FROM  centos:latest
 MAINTAINER vikashashoke@gmail.com
 RUN yum install -y httpd \
