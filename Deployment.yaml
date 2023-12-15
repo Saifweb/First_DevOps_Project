@@ -1,0 +1,20 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+   name: FirstDevopsProject
+spec:
+   replicas: 2 # number of containers
+   selector: 
+    matchLabels:
+     app: FirstDevopsProject
+   template:
+      metadata:
+        labels:
+          app: FirstDevopsProject
+      spec:
+       containers:
+        - name: FirstDevopsProjectContainer 
+          image: saifbenhmida1420/pipeline-demo
+          imagePullPolicy: Always #Specifies that Kubernetes should always pull the latest version of the image from the specified registry.
+          ports:
+          - containerPort: 80 # This means that the application inside the container is expected to listen on port 80.
