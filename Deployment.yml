@@ -1,19 +1,19 @@
 kind: Deployment
 apiVersion: apps/v1
 metadata:
-   name: FirstDevopsProject
+   name: mrsaif
 spec:
    replicas: 2 # number of containers
    selector: 
     matchLabels:
-     app: FirstDevopsProject
+     app: mrsaif
    template:
       metadata:
         labels:
-          app: FirstDevopsProject
+          app: mrsaif
       spec:
        containers:
-        - name: FirstDevopsProjectContainer 
+        - name: mrsaifcontainer 
           image: saifbenhmida1420/pipeline-demo
           imagePullPolicy: Always #Specifies that Kubernetes should always pull the latest version of the image from the specified registry.
           ports:
