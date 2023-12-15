@@ -1,6 +1,7 @@
 ## our docker file
 FROM  centos:latest
 MAINTAINER saifbenhmida1@gmail.com
+RUN yum makecache
 RUN yum install -y httpd \
  zip\
  unzip
