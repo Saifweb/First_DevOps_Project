@@ -14,7 +14,7 @@ spec:
       spec:
        containers:
         - name: mrsaif
-          image: docker.io/saifbenhmida1420/pipeline-demo:latest
+          image: saifbenhmida1420/pipeline-demo
           imagePullPolicy: Always #Specifies that Kubernetes should always pull the latest version of the image from the specified registry.
           ports:
           - containerPort: 80 # This means that the application inside the container is expected to listen on port 80.
