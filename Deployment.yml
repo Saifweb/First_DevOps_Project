@@ -13,7 +13,7 @@ spec:
           app: mrsaif
       spec:
        containers:
-        - name: mrsaifcontainer 
+        - name: mrsaif
           image: saifbenhmida1420/pipeline-demo
           imagePullPolicy: Always #Specifies that Kubernetes should always pull the latest version of the image from the specified registry.
           ports:
