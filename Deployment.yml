@@ -1,20 +1,20 @@
 kind: Deployment
 apiVersion: apps/v1
 metadata:
-   name: mrsaif
+   name: mrdevops
 spec:
-   replicas: 2 # number of containers
-   selector: 
+   replicas: 2
+   selector:      # tells the controller which pods to watch/belong to
     matchLabels:
-     app: mrsaif
+     app: mrdevops
    template:
       metadata:
         labels:
-          app: mrsaif
+          app: mrdevops
       spec:
        containers:
-        - name: mrsaif
+        - name: mrdevops
           image: saifbenhmida1420/pipeline-demo
-          imagePullPolicy: Always #Specifies that Kubernetes should always pull the latest version of the image from the specified registry.
+          imagePullPolicy: Always
           ports:
-          - containerPort: 80 # This means that the application inside the container is expected to listen on port 80.
+          - containerPort: 80

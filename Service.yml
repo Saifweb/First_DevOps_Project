@@ -1,15 +1,14 @@
 kind: Service                             
 apiVersion: v1
 metadata:
-  name: mrsaif
+  name: mrdevops
   labels:
-    app: mrsaif
+    app: mrdevops
 spec:
-  ports:                      # we will redirect the port 8080 to port 80 ( the same port of our container which we defined his port on the Deployment.yaml)
-    - port: 8080                                
+  ports:
+    - port: 8080                               
       targetPort: 80                    
       nodePort: 31200
   selector:
-    app: mrsaif                    
-  type: LoadBalancer    # a LoadBalancer Service is used when you want to expose your Service to the external world, and the cloud provider provisions a load balancer 
-                        # to distribute traffic to the Service.
+    app: mrdevops                    
+  type: LoadBalancer        
